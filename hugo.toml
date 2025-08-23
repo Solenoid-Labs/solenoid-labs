@@ -1,0 +1,102 @@
+# --- General ---
+baseURL = "https://solenoidlabs.com"
+languageCode = "en-us"
+title = "Solenoid Labs"
+
+# --- Build Settings ---
+buildDrafts = false
+buildFuture = false
+buildExpired = false
+enableGitInfo = true
+enableRobotsTXT = true
+
+# --- Permalinks ---
+[permalinks]
+"docs/*" = "/docs/:slug/"            # For section pages
+"docs/**" = "/docs/:sections/:slug/" # For regular pages
+
+# --- Output Formats ---
+[outputs]
+home = ["HTML", "RSS", "JSON"]
+page = ["HTML", "Article"]
+section = ["HTML", "RSS"]
+taxonomy = ["HTML", "RSS"]
+term = ["HTML", "RSS"]
+
+[mediaTypes]
+[mediaTypes."text/html"]
+baseName = "_content"
+isPlainText = false
+suffixes = ["html"]
+
+[outputFormats]
+[outputFormats.Article]
+mediaType = "text/html"
+baseName = "_content"
+permalinkable = true
+
+[pagination]
+pagerSize = 12
+
+[frontmatter]
+lastmod = ["lastmod", ":git", ":fileModTime", ":default"]
+
+# --- Menu Configuration ---
+[menu]
+[[menu.main]]
+name = "Docs"
+url = "/docs/"
+weight = 10
+
+[[menu.main]]
+name = "About"
+url = "/about/"
+weight = 20
+
+[[menu.main]]
+name = "Contact"
+url = "/contact/"
+weight = 30
+
+# --- Site Parameters ---
+[params]
+description = "Solenoid Labs - Elegant Development"
+author = "Solenoid Labs"
+email = "main@solenoidlabs.com"
+repoURL = "https://github.com/Solenoid-Labs"
+
+# --- Social Links ---
+[params.social]
+github = "Solenoid-Labs"
+linkedin = "https://www.linkedin.com/company/solenoidlabs"
+
+# --- Ajax Search Engine ---
+[params.search]
+types = ["docs"]
+
+# --- Markup Configuration ---
+[markup]
+
+[markup.goldmark]
+
+[markup.goldmark.renderer]
+unsafe = true
+
+[markup.goldmark.extensions]
+table = true
+strikethrough = true
+linkify = true
+taskList = true
+
+[markup.tableOfContents]
+startLevel = 2
+endLevel = 5
+ordered = false
+
+[markup.highlight]
+lineNos = true
+lineNumbersInTable = false
+noClasses = false
+codeFences = true
+guessSyntax = true
+tabWidth = 2

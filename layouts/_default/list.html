@@ -1,0 +1,19 @@
+{{ define "main" }}
+  <section class="list-page container-top">
+    <header class="list-header">
+      <h1 class="list-title">{{ .Title }}</h1>
+      {{ if .Content }}
+        <div class="list-description">
+          {{ .Content }}
+        </div>
+      {{ end }}
+    </header>
+
+    <div class="list-content">
+    </div>
+
+    {{ partial "paginator.html" . }}
+
+  </section>
+{{ end }}
+

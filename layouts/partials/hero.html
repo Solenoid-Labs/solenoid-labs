@@ -1,0 +1,16 @@
+<section class="hero">
+  <div class="hero-container">
+
+  <section class="project-hero-wrapper">
+    <div class="project-hero-lines">
+      <div class="project-hero-lines" id="lineGrid"></div>
+    </div>
+
+    {{ partial "projects/symbol.html" (dict
+      "context" .
+      "boxClass" "symbol--single"
+      )
+    }}
+  </section>
+
+</section>

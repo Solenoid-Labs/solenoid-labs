@@ -1,0 +1,6 @@
+{{ $path := "site/logo/logo-white-tp-full.svg" }}
+{{ if (fileExists (printf "assets/%s" $path)) }}
+  {{ $logo := readFile (printf "assets/%s" $path) }}
+  {{ $logo | replaceRE "<svg" "<svg class=\"logo-full\"" | safeHTML }}
+{{ end }}
+

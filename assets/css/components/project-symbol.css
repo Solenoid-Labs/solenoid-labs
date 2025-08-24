@@ -8,6 +8,7 @@
 .project-symbol-box {
   border: 1px solid var(--fg-muted);
   border-radius: var(--radius-default);
+  border-color: var(--fg-muted-darker);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -28,6 +29,14 @@
   border-color: var(--accent-blue);
   background-color: var(--bg-secondary);
 }
+
+.project-logo svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+
 
 .project-abbreviation {
   font-size: var(--font-size-6);
@@ -57,9 +66,4 @@
 
 .project-symbol-box.symbol--card:hover {
   background-color: var(--bg-secondary);
-}
-
-.project-symbol-box.symbol--single {
-  border-color: var(--fg-muted-darker);
-  background-color: var(--bg-primary);
 }

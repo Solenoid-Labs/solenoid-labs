@@ -1,5 +1,5 @@
-{{ $path := "svg/site/logo.svg" }}
+{{ $path := "site/logo/logo-white-tp-icon.svg" }}
 {{ if (fileExists (printf "assets/%s" $path)) }}
-  {{ readFile (printf "assets/%s" $path) | safeHTML }}
+  {{ $logo := readFile (printf "assets/%s" $path) }}
+  {{ $logo | replaceRE "<svg" "<svg class=\"logo\"" | safeHTML }}
 {{ end }}
-

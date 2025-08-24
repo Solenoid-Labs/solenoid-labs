@@ -1,7 +1,8 @@
 .nav-brand .logo {
-  height: 2rem;
-  width: auto;
   display: block;
+  height: 4rem;
+  width: auto;
+  max-width: 100%;
   flex-shrink: 0;
   fill: currentColor;
   color: currentColor;
@@ -12,4 +13,19 @@
 .nav-brand:hover .logo {
   filter: drop-shadow(0 0 3px var(--fg-primary));
   transition: all var(--transition-default) ease;
+}
+
+.nav-brand .logo-full {
+  display: block;
+  height: 4rem;
+  width: auto;
+  max-width: 100%;
+  flex-shrink: 0;
+  pointer-events: none;
+  transition: transform 0.2s ease;
+}
+
+.nav-brand .logo-full path {
+    fill: var(--fg-muted) !important;
+    stroke: var(--fg-muted) !important;
 }

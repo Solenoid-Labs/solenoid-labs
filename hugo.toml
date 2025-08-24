@@ -44,19 +44,29 @@ lastmod = ["lastmod", ":git", ":fileModTime", ":default"]
 # --- Menu Configuration ---
 [menu]
 [[menu.main]]
-name = "Docs"
-url = "/docs/"
+name = "Industries"
+url = "/industries/"
 weight = 10
+
+[[menu.main]]
+name = "Capabilities"
+url = "/capabilities/"
+weight = 20
+
+[[menu.main]]
+name = "Case Studies"
+url = "/cases/"
+weight = 30
 
 [[menu.main]]
 name = "About"
 url = "/about/"
-weight = 20
+weight = 40
 
 [[menu.main]]
 name = "Contact"
 url = "/contact/"
-weight = 30
+weight = 50
 
 # --- Site Parameters ---
 [params]
@@ -68,7 +78,7 @@ repoURL = "https://github.com/Solenoid-Labs"
 # --- Social Links ---
 [params.social]
 github = "Solenoid-Labs"
-linkedin = "https://www.linkedin.com/company/solenoidlabs"
+linkedin = "company/solenoidlabs"
 
 # --- Ajax Search Engine ---
 [params.search]

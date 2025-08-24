@@ -1,7 +1,9 @@
 {{ $boxClass := .boxClass | default "" }}
 <div class="project-symbol-wrapper">
   <a href="/docs" class="project-symbol-box {{ $boxClass }}">
-    <div class="project-abbreviation">Rh</div>
+    <div class="project-logo">
+      {{ partial "logo.html" . }}
+    </div>
   </a>
 </div>
 

@@ -56,7 +56,8 @@
 }
 
 .nav-link {
-  color: var(--fg-primary);
+  /* color: var(--fg-primary); */
+  color: #ffffff;
   font-size: var(--text-sm);
   border: none;
   transition: color 0.2s ease;
@@ -64,7 +65,7 @@
 
 .nav-link:hover,
 .nav-link--active {
-  color: var(--accent-blue);
+  color: var(--fg-primary);
 }
 
 .nav-item::before {

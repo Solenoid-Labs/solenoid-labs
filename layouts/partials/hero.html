@@ -4,11 +4,15 @@
       <div class="project-hero-lines" id="lineGrid"></div>
       
       <div class="hero-content">
-
-        <div class="hero-text">
-          <h1 class="hero-tagline">Engineering tomorrow's systems</h1>
-          <h3 class="hero-descriptor">AI & Infrastructure Consulting</h3>
-        </div>
+        {{ partial "projects/symbol.html" (dict
+          "context" .
+          "boxClass" "symbol--single"
+          )
+        }}
+        <!-- <div class="hero-text"> -->
+        <!--   <h1 class="hero-tagline">Engineering tomorrow's systems</h1> -->
+        <!--   <p class="hero-descriptor">AI & Infrastructure Consulting</p> -->
+        <!-- </div> -->
       </div>
       
     </section>

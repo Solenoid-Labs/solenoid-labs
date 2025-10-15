@@ -25,24 +25,24 @@
             requests
           ]
         );
-        pre-commit-check = pre-commit-hooks.lib.${system}.run {
-          src = self;
-          hooks = {
-            preprocess-images = {
-              enable = true;
-              entry = "${pyEnv}/bin/python scripts/preprocess-images.py";
-              language = "system";
-              pass_filenames = false;
-              files = ".*";
-              types = [ "file" ];
-              verbose = true;
-            };
-          };
-        };
+        # pre-commit-check = pre-commit-hooks.lib.${system}.run {
+        #   src = self;
+        #   hooks = {
+        #     preprocess-images = {
+        #       enable = true;
+        #       entry = "${pyEnv}/bin/python scripts/preprocess-images.py";
+        #       language = "system";
+        #       pass_filenames = false;
+        #       files = ".*";
+        #       types = [ "file" ];
+        #       verbose = true;
+        #     };
+        #   };
+        # };
       in
       {
         devShells.default = pkgs.mkShell {
-          inputsFrom = [ pre-commit-check ];
+          # inputsFrom = [ pre-commit-check ];
           buildInputs = with pkgs; [
             # Site Tooling
             hugo
@@ -67,7 +67,7 @@
           ];
         };
 
-        checks.pre-commit = pre-commit-check;
+        # checks.pre-commit = pre-commit-check;
       }
     );
 }
